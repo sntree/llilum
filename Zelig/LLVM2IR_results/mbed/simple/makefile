@@ -28,13 +28,13 @@ OBJECTS += \
 	$(TARGET)\mbed_i2c.o \
 	$(TARGET)\mbed_mem.o \
 	$(TARGET)\mbed_memory.o \
-	$(TARGET)\mbed_NVIC.o \
+	$(TARGET)\mbed_nvic.o \
 	$(TARGET)\mbed_overrides.o \
 	$(TARGET)\mbed_pwm.o \
 	$(TARGET)\mbed_serial.o \
 	$(TARGET)\mbed_spi.o \
 	$(TARGET)\mbed_system_timer.o \
-	$(TARGET)\mbed_SysTick.o \
+	$(TARGET)\mbed_systick.o \
 	$(TARGET)\mbed_threading.o \
 	$(TARGET)\mbed_unwind.o \
 
