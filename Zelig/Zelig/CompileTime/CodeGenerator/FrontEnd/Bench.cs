@@ -124,7 +124,7 @@ namespace Microsoft.Zelig.FrontEnd
         const string DefaultOptArgs_target_x86 = "-march=x86 -mcpu=x86-64";
         const string DefaultOptArgs_target_df  = DefaultOptArgs_target_m3;
 
-        const string LlvmRegSoftwareBinPath    = @"SOFTWARE\LLVM\3.8.0";
+        const string LlvmRegSoftwareBinPath    = @"SOFTWARE\LLVM\3.8.1";
 
         //--//
 
