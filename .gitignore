@@ -258,3 +258,5 @@ Zelig/Zelig/CompileTime/Llvm.NET/Win32/RelWithDebInfo/Llvm.NET.dll
 /Zelig/Zelig/CompileTime/Llvm.NET/LibLLVM/generatedversioninfo.h
 /LlilumSDK/LlilumSDK/FrameworkList.xml
 Zelig/Zelig/Zelig.VC.db
+*.bak
+*.d
