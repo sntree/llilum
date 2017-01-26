@@ -58,7 +58,45 @@ defined in linker script */
 .word  _sdata
 /* end address for the .data section. defined in linker script */
 .word  _edata
+/* start address for the .bss section. defined in linker script */
+.word  _sbss
+/* end address for the .bss section. defined in linker script */
+.word  _ebss
 /* stack used for SystemInit_ExtMemCtl; always internal RAM used */
+/**
+ * LLILUM: define stack and heap symbols to accomodate the MSP wrapping on exception thread
+*/
+    .section .stack
+    .align 3
+.ifdef __STACK_SIZE
+    .equ    Stack_Size, __STACK_SIZE
+.else
+    .equ    Stack_Size, 0x800
+.endif
+    .globl    __StackTop
+    .globl    __StackLimit
+__StackLimit:
+    .space    Stack_Size
+    .size __StackLimit, . - __StackLimit
+__StackTop:
+    .size __StackTop, . - __StackTop
+
+    .section .heap
+    .align 3
+.ifdef __HEAP_SIZE
+    .equ    Heap_Size, __HEAP_SIZE
+.else
+    .equ    Heap_Size, 0x800
+.endif
+    .globl    __HeapBase
+    .globl    __HeapLimit
+__HeapBase:
+    .space    Heap_Size
+    .size __HeapBase, . - __HeapBase
+__HeapLimit:
+    .size __HeapLimit, . - __HeapLimit
+
+
 
 /**
  * @brief  This is the code that gets called when the processor first
@@ -91,6 +129,17 @@ LoopCopyDataInit:
   adds  r2, r0, r1
   cmp  r2, r3
   bcc  CopyDataInit
+  ldr  r2, =_sbss
+  b  LoopFillZerobss
+/* Zero fill the bss segment. */  
+FillZerobss:
+  movs  r3, #0
+  str  r3, [r2], #4
+    
+LoopFillZerobss:
+  ldr  r3, = _ebss
+  cmp  r2, r3
+  bcc  FillZerobss
 
 /* Call the clock system intitialization function.*/
   bl  SystemInit   
