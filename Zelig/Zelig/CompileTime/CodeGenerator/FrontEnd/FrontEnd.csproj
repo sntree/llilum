@@ -136,6 +136,7 @@
     <None Include="mbed_simple_NET_K64F.FrontEndConfig" />
     <None Include="mbed_simple_STM32F401.FrontEndConfig" />
     <None Include="mbed_simple_STM32F411.FrontEndConfig" />
+    <None Include="mbed_simple_STM32F429.FrontEndConfig" />
     <None Include="mbed_simple_STM32L152.FrontEndConfig" />
     <None Include="mbed_common_K64F.FrontEndConfig" />
     <None Include="mbed_common_LPC1768.FrontEndConfig" />

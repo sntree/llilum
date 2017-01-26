@@ -13,6 +13,8 @@
 #include "stm32l1xx.h"
 #elif TARGET_STM32F411RE
 #include "stm32f4xx.h"
+#elif TARGET_STM32F429
+#include "stm32f4xx.h"
 #elif TARGET_STM32F401RE
 #include "stm32f4xx.h"
 #elif TARGET_STM32F091RC
