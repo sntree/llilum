@@ -10,8 +10,8 @@
 
 -Architecture cortex-m4
 
-#~#-CompilationSetupPath ..\..\..\..\ZeligBuild\Host\bin\Debug\Microsoft.Llilum.BoardConfigurations.STM32F411.dll
--CompilationSetup Microsoft.Llilum.BoardConfigurations.STM32F411MBEDCompilationSetup
+#~#-CompilationSetupPath ..\..\..\..\ZeligBuild\Host\bin\Debug\Microsoft.Llilum.BoardConfigurations.STM32F429.dll
+-CompilationSetup Microsoft.Llilum.BoardConfigurations.STM32F429MBEDCompilationSetup
 
 
 ###
@@ -20,7 +20,7 @@
 -Reference Microsoft.CortexM4OnMBED
 -Reference Microsoft.CortexM4OnCMSISCore
 -Reference Microsoft.DeviceModels.ModelForCortexM4
--Reference STM32F411
+-Reference STM32F429
 
 
 ###

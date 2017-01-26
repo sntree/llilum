@@ -3,7 +3,7 @@
 //
 
 
-namespace Microsoft.Llilum.STM32F411.Drivers
+namespace Microsoft.Llilum.STM32F429.Drivers
 {
     using Chipset = Microsoft.CortexM4OnMBED.Drivers;
 

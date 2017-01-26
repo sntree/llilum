@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation.    All rights reserved.
 //
 
-namespace Microsoft.Llilum.STM32F411.HardwareModel.HardwareProviders
+namespace Microsoft.Llilum.STM32F429.HardwareModel.HardwareProviders
 {
     using System;
     using Chipset = CortexM4OnMBED;

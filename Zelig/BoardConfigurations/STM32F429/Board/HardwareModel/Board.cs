@@ -3,7 +3,7 @@
 //
 
 
-namespace Microsoft.Llilum.STM32F411
+namespace Microsoft.Llilum.STM32F429
 {
     using System;
     
@@ -49,12 +49,12 @@ namespace Microsoft.Llilum.STM32F411
 
         private static readonly int[] s_ledPins = new int[] 
         {
-            (int)STM32F411.PinName.LED1,
+            (int)STM32F429.PinName.LED1,
         };
 
         private static readonly int[] s_pwmPins = new int[] 
         {
-            (int)STM32F411.PinName.D3,
+            (int)STM32F429.PinName.D3,
         };
 
         //

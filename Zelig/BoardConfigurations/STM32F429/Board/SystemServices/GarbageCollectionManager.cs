@@ -3,7 +3,7 @@
 //
 
 
-namespace Microsoft.Llilum.STM32F411
+namespace Microsoft.Llilum.STM32F429
 {
     using Chipset = Microsoft.CortexM4OnMBED;
 
