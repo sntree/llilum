@@ -121,6 +121,8 @@ extern "C"
         return (void*)0x2002FFFC;
 #elif defined(TARGET_STM32F411RE)
         return (void*)0x2001FFFC;
+#elif defined(TARGET_STM32F429)
+        return (void*)0x2002FFFC;
 #elif defined(TARGET_STM32F401RE)
         return (void*)0x20017FFC;
 #elif defined(TARGET_STM32L152RE)
