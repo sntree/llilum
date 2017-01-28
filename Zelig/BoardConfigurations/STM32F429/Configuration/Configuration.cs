@@ -11,31 +11,31 @@ namespace Microsoft.Llilum.BoardConfigurations
     public sealed class STM32F429SoC : ProcessorCategory
     {
         [DependsOn(typeof(STM32F429SoC))]
-        [DisplayName("Internal 128KB Static RAM")]
+        [DisplayName("Internal 192KB Static RAM")]
         [Defaults("BaseAddress", 0x20000000U)]
-        [Defaults("SizeInBytes", 128 * 1024)]
+        [Defaults("SizeInBytes", 192 * 1024)]
         [Defaults("WordSize", 32)]
         [Defaults("WaitStates", 0)]
         [EnumDefaults("Characteristics", MemoryAttributes.RAM |
                                           MemoryAttributes.RandomAccessMemory |
                                           MemoryAttributes.InternalMemory |
                                           MemoryAttributes.ConfiguredAtEntryPoint)]
-        public sealed class InternalRAM128KB : RamMemoryCategory
+        public sealed class InternalRAM192KB : RamMemoryCategory
         {
         }
 
 
         [DependsOn(typeof(STM32F429SoC))]
-        [DisplayName("Internal 512KB FLASH")]
+        [DisplayName("Internal 2MB FLASH")]
         [Defaults("BaseAddress", 0x08000000U)]
-        [Defaults("SizeInBytes", 512 * 1024)]
+        [Defaults("SizeInBytes", 2048 * 1024)]
         [Defaults("WordSize", 32)]
         [Defaults("WaitStates", 0)]
         [EnumDefaults("Characteristics", MemoryAttributes.FLASH |
                                           MemoryAttributes.RandomAccessMemory |
                                           MemoryAttributes.InternalMemory |
                                           MemoryAttributes.ConfiguredAtEntryPoint)]
-        public sealed class InternalFlash512KB : FlashMemoryCategory
+        public sealed class InternalFlash2048KB : FlashMemoryCategory
         {
         }
     }
@@ -55,7 +55,7 @@ namespace Microsoft.Llilum.BoardConfigurations
                         MemoryUsage.Heap |
                         MemoryUsage.DataRW |
                         MemoryUsage.Code)]
-        [AllowedOptions(typeof(STM32F429SoC.InternalRAM128KB))]
+        [AllowedOptions(typeof(STM32F429SoC.InternalRAM192KB))]
         [Defaults("BaseAddress", 0x20000000U)]
         public RamMemoryCategory InternalRamChip;
 
@@ -68,7 +68,7 @@ namespace Microsoft.Llilum.BoardConfigurations
                         MemoryUsage.DataRO |
                         MemoryUsage.VectorsTable |
                         MemoryUsage.Relocation)]
-        [AllowedOptions(typeof(STM32F429SoC.InternalFlash512KB))]
+        [AllowedOptions(typeof(STM32F429SoC.InternalFlash2048KB))]
         [Defaults("BaseAddress", 0x08000000U)]
         public FlashMemoryCategory InternalFlashChip;
     }
@@ -81,7 +81,7 @@ namespace Microsoft.Llilum.BoardConfigurations
     public sealed class STM32F429 : ProductCategory
     {
         [AllowedOptions(typeof(STM32F429SoC))]
-        [Defaults("CoreClockFrequency"     , 100000000UL)]
+        [Defaults("CoreClockFrequency"     , 180000000UL)]
         [Defaults("RealTimeClockFrequency" , 1000000UL)]
         [Defaults("DefaultThreadPoolThreads", 2)]
         [Defaults("DefaultTimerPoolThreads" , 2)]
@@ -89,11 +89,11 @@ namespace Microsoft.Llilum.BoardConfigurations
 
         //--//
 
-        [AllowedOptions(typeof(STM32F429SoC.InternalRAM128KB))]
+        [AllowedOptions(typeof(STM32F429SoC.InternalRAM192KB))]
         [Defaults("BaseAddress", 0x20000000U)]
         public RamMemoryCategory InternalRam;
 
-        [AllowedOptions(typeof(STM32F429SoC.InternalFlash512KB))]
+        [AllowedOptions(typeof(STM32F429SoC.InternalFlash2048KB))]
         [Defaults("BaseAddress", 0x08000000U)]
         public FlashMemoryCategory InternalFlashChip;
     }

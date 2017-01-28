@@ -10,7 +10,7 @@ namespace Microsoft.Llilum.STM32F429
 
     public sealed class ThreadManager : Chipset.ThreadManager
     {
-        private const int DefaultStackSizeSTM32F411 = 4 * 1024;
+        private const int DefaultStackSizeSTM32F429 = 4 * 1024;
 
         //--//
 
@@ -26,7 +26,7 @@ namespace Microsoft.Llilum.STM32F429
 
                 if(stackSize == 0)
                 {
-                    return DefaultStackSizeSTM32F411;
+                    return DefaultStackSizeSTM32F429;
                 }
 
                 return (int)stackSize;

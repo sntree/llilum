@@ -10,7 +10,7 @@ namespace Microsoft.Llilum.STM32F429
     using ChipsetModel  = Microsoft.CortexM4OnMBED;
 
 
-    [RT.ProductFilter("Microsoft.Llilum.BoardConfigurations.STM32F411")]
+    [RT.ProductFilter("Microsoft.Llilum.BoardConfigurations.STM32F429")]
     public sealed class Processor : Microsoft.CortexM4OnMBED.Processor
     {
         public new class Context : ChipsetModel.Processor.Context
