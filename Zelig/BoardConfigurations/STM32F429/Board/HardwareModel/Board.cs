@@ -50,6 +50,7 @@ namespace Microsoft.Llilum.STM32F429
         private static readonly int[] s_ledPins = new int[] 
         {
             (int)STM32F429.PinName.LED1,
+            (int)STM32F429.PinName.LED2,
         };
 
         private static readonly int[] s_pwmPins = new int[] 
